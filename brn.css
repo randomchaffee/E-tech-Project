@@ -1,4 +1,46 @@
-	
+
+.header1 {
+  color: #a4a3a3;
+  font-size: 27px;
+  position: absolute; left: 100px; top: 50px;
+  text-decoration: none;
+  font-family: 'Trebuchet MS';
+  font-style: normal;
+  transition: color 0.1s ease;
+}
+
+.header1:hover {
+  color: #fff;
+}
+
+.header2 {
+  color: #a4a3a3;
+  font-size: 27px;
+  position: absolute; left: 300px; top: 50px;
+  text-decoration: none;
+  font-family: 'Trebuchet MS';
+  font-style: normal;
+  transition: color 0.1s ease;
+}
+
+.header2:hover {
+  color: #fff;
+}
+
+.header3 {
+  color: #a4a3a3;
+  font-size: 27px;
+  position: absolute; left: 500px; top: 50px;
+  text-decoration: none;
+  font-family: 'Trebuchet MS';
+  font-style: normal;
+  transition: color 0.1s ease;
+}
+
+.header3:hover {
+  color: #fff;
+}
+
 .btn {
   display: inline-block;
   padding: 10px 20px;
@@ -15,7 +57,7 @@
 
 body {
   background-color: #121111;
-  background-image: url('code.jpg');
+  background-image: url('kb.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -46,7 +88,7 @@ p {
   flex-direction: column  ;
 }
 
-.imaage-wrapper {
+.image-wrapper {
   display: flex;
   flex-direction: column;
   flex: 1;
