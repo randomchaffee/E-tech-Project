@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<head>
+<title> testing website </title>
+
+<style>
+body {
+  display: grid;
+  height: 100vh;
+  text-align: center;
+}
+
+main {
+  margin: auto;
+}
+
+main a {
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  color: #000;
+  text-decoration: none;
+  background: #dedede;
+}
+
+////////////////////////
+// Tooltip Variables
+////////////////////////
+
+$tt-padding: 0.5em 0.6em;
+$tt-z-index: 1000;
+$tt-text-color: #fff;
+$tt-background-color: #000;
+$tt-box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
+$tt-font-size: 14px;
+$tt-line-height: 1;
+$tt-border-radius: 2px;
+$tt-animation: 250ms;
+$tt-animation-delay: 150ms;
+
+////////////////////////
+// Tooltip Styles
+////////////////////////
+
+.tooltip {
+  position: relative;
+}
+
+// Applies to all tooltips
+.tooltip::before,
+.tooltip::after {
+  text-transform: none;
+  font-size: $tt-font-size;
+  line-height: $tt-line-height;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  // display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: all $tt-animation ease-in-out $tt-animation-delay;
+}
+
+.tooltip::before {
+  content: "";
+  border: 5px solid transparent;
+  z-index: $tt-z-index + 1;
+}
+
+.tooltip::after {
+  content: attr(aria-label);
+  padding: $tt-padding;
+  text-align: center;
+  // Let the content set the size of the tooltips
+  // but this will also keep them from being obnoxious
+  min-width: 3em;
+  max-width: 21em;
+  // overflow ellipsis if wider than max-width
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: $tt-border-radius;
+  box-shadow: $tt-box-shadow;
+  background: $tt-background-color;
+  color: $tt-text-color;
+  z-index: $tt-z-index;
+}
+
+// Don't show empty tooltips
+.tooltip[aria-label=""]::before,
+.tooltip[aria-label=""]::after {
+  display: none !important;
+}
+
+// Tooltip Top
+.tooltip-top::before {
+  bottom: 100%;
+  border-bottom-width: 0;
+  border-top-color: $tt-background-color;
+}
+
+.tooltip-top::after {
+  bottom: calc(100% + 5px);
+}
+
+.tooltip-top::before,
+.tooltip-top::after {
+  left: 50%;
+  transform: translate(-50%, -0.5em);
+}
+
+// Tooltip Bottom
+.tooltip-bottom::before {
+  top: 100%;
+  border-top-width: 0;
+  border-bottom-color: $tt-background-color;
+}
+
+.tooltip-bottom::after {
+  top: calc(100% + 5px);
+}
+
+.tooltip-bottom:before,
+.tooltip-bottom::after {
+  left: 50%;
+  transform: translate(-50%, 0.5em);
+}
+
+// Tooltip Left
+.tooltip-left::before {
+  top: 50%;
+  border-right-width: 0;
+  border-left-color: $tt-background-color;
+  left: calc(0em - 5px);
+  transform: translate(-0.5em, -50%);
+}
+
+.tooltip-left::after {
+  top: 50%;
+  right: calc(100% + 5px);
+  transform: translate(-0.5em, -50%);
+}
+
+// Tooltip Right
+.tooltip-right::before {
+  top: 50%;
+  border-left-width: 0;
+  border-right-color: $tt-background-color;
+  right: calc(0em - 5px);
+  transform: translate(0.5em, -50%);
+}
+
+.tooltip-right::after {
+  top: 50%;
+  left: calc(100% + 5px);
+  transform: translate(0.5em, -50%);
+}
+
+// Show tooltips if the user's primary input mechanism can hover
+@media (hover: hover) {
+  .tooltip:hover,
+  .tooltip:focus {
+    
+    // Top + Bottom Animations
+    &.tooltip-top::before,
+    &.tooltip-top::after,
+    &.tooltip-bottom::before,
+    &.tooltip-bottom::after {
+      display: block;
+      visibility: visible;
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    // Left + Right Animations
+    &.tooltip-left::before,
+    &.tooltip-left::after,
+    &.tooltip-right::before,
+    &.tooltip-right::after {
+      display: block;
+      transform: translate(0, -50%);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+
+
+</style>
+<body style="text-align:center;">
+
+
+
+</style>
+<body>
+<h1> Paragratph </h1>
+<h2> Head </h2>
+<h3> Head </h3>
+
+  
+<main>
+  <div>
+    <a class="tooltip tooltip-top" href="#" aria-label="I'm up above it!">Up</a>
+  </div>
+  
+  <div>
+    <a class="tooltip tooltip-left" href="#" aria-label="Slide to the left">Left</a>
+    <a class="tooltip tooltip-right" href="#" aria-label="Slide to the right">Right</a>
+  </div>
+  
+  <div>
+    <a class="tooltip tooltip-bottom" href="#" aria-label="Get Down">Down</a>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</head>

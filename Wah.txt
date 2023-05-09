@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title> testing website </title>
+
+
+
+<style>
+ body {
+ height: 100vh;
+  @include display(flex);
+  @include justify-content(center);
+  @include align-items(center);
+}
+</style>
+<style>
+
+
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.special-text {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Show the tooltip on hover */
+.special-text:hover .special-text__tooltip {
+  visibility: visible;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.special-text:hover .special-text__tooltip {
+	opacity: 1;
+	transition: opacity 1s;
+	}
+	
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 3s;
+  transition-delay: 1s;
+}
+
+div:hover {
+  width: 300px;
+}
+
+.special-text__tooltip {
+  font-size: 14px;
+  
+  position: absolute;
+  width: 30%%;
+  left: 0%;
+  bottom: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  border: 5px solid #FF00FF;
+  border-radius: 3px;
+  
+  /* Hide the tooltip by default */
+  visibility: hidden;
+  opacity: 0;
+  
+  /* Prettify */
+  text-align: left;
+  
+  @include transition-property(opacity);
+  @include transition-duration(0.5s);
+  @include transition-timing-function(linear);
+  @include transition-delay(initial);
+  /* The above are Bourbon mixins equivalent to the following:
+  -webkit-transition: opacity 0.5s linear;
+  -moz-transition: opacity 0.5s linear;
+  -ms-transition: opacity 0.5s linear;
+  -o-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
+  */
+}
+
+/* The bordered part of the triangle */
+$border-width: 10px;
+
+.special-text__tooltip::before,
+.special-text__tooltip::after {
+  content: "";
+  position: absolute;
+  border-left: $border-width solid transparent;
+  border-right: $border-width solid transparent;
+  top: 100%;
+  left: 50%;
+  margin-left: -$border-width;
+}
+
+.special-text__tooltip::before {
+  border-top: $border-width solid #FF00FF;
+  margin-top: 5px;
+}
+
+/* The white fill of the triangle */
+.special-text__tooltip::after {
+  border-top: $border-width solid white;
+  margin-top: -2px;
+  z-index: 1;
+
+</style>
+<body style="text-align:center;">
+
+ 
+
+</style>
+<body>
+
+<body style="background-color:powderblue;">
+
+
+
+<h1> Paragratph </h1>
+<h2> Head </h2>
+<h3> Head </h3>
+
+
+<div class="container">	
+
+<p class="special-text">
+<img src="dog.jpg"><a href="https://blaanda.com/menu/?gclid=Cj0KCQjw3a2iBhCFARIsAD4jQB3vzsgAZ21YhpRkkEa70WU5YmWTGk0QLzTbe8ifC_1r_65PrcCZxEwaAkjVEALw_wcB&cn-reloaded=1">
+  <span class="special-text__tooltip"> <img src="dog.jpg"> yummy hotdogS 
+	</span>
+</div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</head>
+</html>

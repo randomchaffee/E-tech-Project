@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ABOUT US</title>
+</head>
+<style>
+.header1 {
+  color: #a4a3a3;
+  font-size: 27px;
+  position: absolute; left: 100px; top: 50px;
+  text-decoration: none;
+  font-family: 'Trebuchet MS';
+  font-style: normal;
+  transition: color 0.1s ease;
+}
+
+.header1:hover {
+  color: #fff;
+}
+
+.header2 {
+  color: #a4a3a3;
+  font-size: 27px;
+  position: absolute; left: 300px; top: 50px;
+  text-decoration: none;
+  font-family: 'Trebuchet MS';
+  font-style: normal;
+  transition: color 0.1s ease;
+}
+
+
+
+.header3 {
+  color: #a4a3a3;
+  font-size: 27px;
+  position: absolute; left: 500px; top: 50px;
+  text-decoration: none;
+  font-family: 'Trebuchet MS';
+  font-style: normal;
+  transition: color 0.1s ease;
+}
+
+
+
+body {
+  background-color: #121111;
+  background-image: url('kb.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+h1 {
+	color:white;
+	font-style: normal;
+  font-family: 'Trebuchet MS';
+	font-size: 75px;
+	position:absolute; left:30px; top:0px;
+	text-shadow: 2px 1px 1px rgb(0, 0, 0);
+}
+
+
+	text-shadow: 2px 1px 1px rgb(0, 0, 0);
+}
+
+</style>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  margin-bottom:20px;
+}
+</style>
+<body>
+
+<a href="https://ceass.com" target="_blank" rel="noopener noreferrer" class="header1">HOME</a>
+<a href="https://ceass.com" target="_blank" rel="noopener noreferrer" class="header2">GUIDES</a>
+<a href="https://ceass.com" target="_blank" rel="noopener noreferrer" class="header3">ABOUT US</a>
+
+
+<h2>ABOUT US</h2>
+<p>Creators</p>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+	<img src="boi1.jpg">
+      <h3>Evan</h3>
+      <p>Website Programmer</p>
+      <p>Cool Guy</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+	<img src="girl1.jpg">
+      <h3>Cerwin</h3>
+      <p>Web Designer</p>
+      <p>Back seat president</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+	<img src="boi2.jpg">
+      <h3>Sev</h3>
+      <p>Web Programmer</p>
+      <p>HSR addict</p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+	<img src="girl2.jpg">
+      <h3>Steven</h3>
+      <p>Web Designer</p>
+      <p>Stevin or Steven?</p>
+    </div>
+  </div>
+</div>
+
+<div class="column">
+    <div class="card">
+	<img src="boi3.jpg">
+      <h3>Dereck</h3>
+      <p>Web Designer</p>
+      <p>Mysterious na guy</p>
+	  </div>
+	 </div>
+	</div>
+</div>
+</body>
+</html>
